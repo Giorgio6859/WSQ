@@ -1,0 +1,36 @@
+// Quiz #08
+#include <iostream>
+#include <vector>
+using namespace std;
+int main () {
+
+  cout << "escriba valores de los que quiera sumar su cuadrado y cuando quiera parar teclee 0 " <<endl;
+
+  vector <int> squarelist;
+
+  int num;
+  cin>> num ;
+
+  while (num != 0) {
+    squarelist.push_back(num);
+    cin >> num;
+  }
+
+  int p;
+  cout << "El vector es " <<endl;
+  for (p=0; p<squarelist.size(); p++)
+  cout << squarelist[p] << " " ;
+  cout << "  " <<endl;
+
+int s=0;
+  cout << "La suma de los datos del vector es " <<endl;
+  for (p=0; p<squarelist.size(); p++)
+  s= s+ squarelist[p];
+  cout << s <<endl;
+
+int c=0;
+  cout << "La suma de los cuadrados de los datos del vector es " <<endl;
+  for (p=0; p<squarelist.size(); p++)
+  c= c+ (squarelist[p]*squarelist[p]);
+  cout << c <<endl;
+}
